@@ -7,8 +7,6 @@ ENV CERES_VERSION="1.13.0"
 ENV JOBS_NUM="2"
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN cd /root && mkdir Library
-
 WORKDIR /root/Library
 
 RUN git clone https://gitee.com/gongyiqunall/yaml-cpp.git && \
