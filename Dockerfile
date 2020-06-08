@@ -70,7 +70,7 @@ WORKDIR /root/Library
 
 COPY ippicv_linux_20151201.tgz /root/Library
 
-RUN git clone https://gitee.com/gongyiqunall/opencv.git && \
+RUN git clone https://github.com/opencv/opencv.git && \
     cd opencv && git checkout ${OPENCV_VERSION} && \
     mkdir -p 3rdparty/ippicv/downloads/linux-808b791a6eac9ed78d32a7666804320e && \
     cp /root/Library/ippicv_linux_20151201.tgz  \ 
@@ -79,12 +79,12 @@ RUN git clone https://gitee.com/gongyiqunall/opencv.git && \
     cmake .. && make -j${JOBS_NUM} install && \
     rm -rf /root/Library/*
 
-RUN git clone https://gitee.com/gongyiqunall/g2o.git && \
+RUN git clone https://github.com/RainerKuemmerle/g2o.git && \
     cd g2o && mkdir build && cd build && \
     cmake .. && make -j${JOBS_NUM} install && \
     rm -rf /root/Library/*
 
-RUN git clone https://gitee.com/gongyiqunall/Pangolin.git && \
+RUN git clone https://github.com/stevenlovegrove/Pangolin.git && \
 	cd Pangolin && mkdir build && cd build && \
 	cmake .. && make -j${JOBS_NUM} install && \
     rm -rf /root/Library/*
