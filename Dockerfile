@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 WORKDIR /root/Library
 
-RUN git clone https://gitee.com/gongyiqunall/pcl.git && \
+RUN git clone https://github.com/PointCloudLibrary/pcl.git && \
     cd pcl && git checkout ${PCL_VERSION} && \
     mkdir build && cd build && \
     cmake .. && make -j${JOBS_NUM} install && \
