@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 WORKDIR /root/Library
 
-RUN git clone https://gitee.com/gongyiqunall/yaml-cpp.git && \
+RUN git clone https://github.com/jbeder/yaml-cpp.git && \
     cd yaml-cpp && mkdir build && cd build && \
     cmake .. && make -j${JOBS_NUM} install && \
     rm -rf /root/Library/*
@@ -19,14 +19,14 @@ RUN git clone https://github.com/uzh-rpg/fast.git && \
     cmake .. && make -j${JOBS_NUM} install && \
     rm -rf /root/Library/*
 
-RUN git clone https://gitee.com/gongyiqunall/ceres-solver.git && \
+RUN git clone https://github.com/ceres-solver/ceres-solver.git && \
 	cd ceres-solver && git checkout ${CERES_VERSION} && \
 	mkdir build && cd build && \
 	cmake .. && make -j${JOBS_NUM} install && \
     rm -rf /root/Library/*
 
 
-RUN git clone https://gitee.com/gongyiqunall/DBow3.git && \
+RUN git clone https://github.com/rmsalinas/DBow3.git && \
     cd DBow3 && mkdir build && cd build && \
     cmake .. && make -j${JOBS_NUM} install && \
     rm -rf /root/Library/*
