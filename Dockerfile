@@ -89,37 +89,9 @@ RUN git clone https://gitee.com/gongyiqunall/Pangolin.git && \
 	cmake .. && make -j${JOBS_NUM} install && \
     rm -rf /root/Library/*
 
-RUN git clone https://gitee.com/gongyiqunall/pcl.git && \
-    cd pcl && git checkout ${PCL_VERSION} && \
-    mkdir build && cd build && \
-    cmake .. && make -j${JOBS_NUM} install && \
-    rm -rf /root/Library/*
-
 RUN git clone https://github.com/strasdat/Sophus.git && \
     cd Sophus && git checkout ${SOPHUS_VERSION} && \
     mkdir build && cd build && \
-    cmake .. && make -j${JOBS_NUM} install && \
-    rm -rf /root/Library/*
-
-RUN git clone https://gitee.com/gongyiqunall/yaml-cpp.git && \
-    cd yaml-cpp && mkdir build && cd build && \
-    cmake .. && make -j${JOBS_NUM} install && \
-    rm -rf /root/Library/*
-
-RUN git clone https://github.com/uzh-rpg/fast.git && \
-    cd fast && mkdir build && cd build && \
-    cmake .. && make -j${JOBS_NUM} install && \
-    rm -rf /root/Library/*
-
-RUN git clone https://gitee.com/gongyiqunall/ceres-solver.git && \
-	cd ceres-solver && git checkout ${CERES_VERSION} && \
-	mkdir build && cd build && \
-	cmake .. && make -j${JOBS_NUM} install && \
-    rm -rf /root/Library/*
-
-
-RUN git clone https://gitee.com/gongyiqunall/DBow3.git && \
-    cd DBow3 && mkdir build && cd build && \
     cmake .. && make -j${JOBS_NUM} install && \
     rm -rf /root/Library/*
 
