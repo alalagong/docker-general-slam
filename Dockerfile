@@ -7,8 +7,6 @@ ENV PCL_VERSION="pcl-1.8.0rc2"
 ENV JOBS_NUM="1"
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN cd /root && mkdir Library
-
 WORKDIR /root/Library
 
 RUN git clone https://gitee.com/gongyiqunall/pcl.git && \
