@@ -31,3 +31,7 @@ RUN git clone https://github.com/rmsalinas/DBow3.git && \
     cmake .. && make -j${JOBS_NUM} install && \
     rm -rf /root/Library/*
 
+EXPOSE 5900
+EXPOSE 22
+
+ENTRYPOINT ["./startup.sh"]
