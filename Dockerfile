@@ -15,6 +15,8 @@ RUN git clone https://github.com/PointCloudLibrary/pcl.git && \
     cmake .. && make -j${JOBS_NUM} install && \
     rm -rf /root/Library/*
 
+WORKDIR /root
+
 EXPOSE 5900
 EXPOSE 22
 
